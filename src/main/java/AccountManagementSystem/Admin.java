@@ -465,6 +465,7 @@ public class Admin {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Ignore.
 		Admin myAdmin = new Admin();
 		int choice = 0;
 		while(choice != 10)
