@@ -443,7 +443,7 @@ public class Admin {
 				if (accountList.get(i).accNumber == senderAccNum)
 				{
 					accountList.get(i).transferAmount(amount, time, recipient);
-//					System.out.println("Transfer successful.");
+					System.out.println("Transfer successful.");
 					return;
 				}
 			}
