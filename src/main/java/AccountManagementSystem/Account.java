@@ -14,7 +14,7 @@ public class Account {
 		public Account(int accNumber, float balance, String accType, String dateCreated,Customer cust)
 		{
 			this.accNumber = accNumber;
-			this.balance = balance;
+			this.balance = balance; // ok
 			this.accType = accType;
 			this.dateCreated = dateCreated;
 			this.cust = cust;

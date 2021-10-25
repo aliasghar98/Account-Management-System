@@ -35,6 +35,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Program Files/Java/junit-4.13.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/junit-4.13.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
