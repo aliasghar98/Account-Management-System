@@ -253,63 +253,63 @@ public class Admin {
 		// Ignore.
 		Admin myAdmin = new Admin();
 		int choice = 0;
-		while(choice != 10)
-		{
-			System.out.println("Please enter single digit number (1,2,3... etc.) as per your choice:");
-			System.out.println("1. Open an account.");
-			System.out.println("2. Close an account. ");
-			System.out.println("3. Login to account. ");
-			System.out.println("4. Make deposit. ");
-			System.out.println("5. Make withdrawal. ");
-			System.out.println("6. Check balance. ");
-			System.out.println("7. Print statement. ");
-			System.out.println("8. Transfer Amount. ");
-			System.out.println("9. Display Account Details");
-			System.out.println("10. Exit");
-			Scanner input = new Scanner(System.in);
-			choice = input.nextInt();
-			if(choice == 1)
-			{
-				myAdmin.openAccount();
-			}
-			else if (choice == 2)
-			{
-				myAdmin.closeAccount();
-			}
-			else if (choice == 3)
-			{
-				myAdmin.loginAccount();
-			}
-			else if (choice == 4)
-			{
-				myAdmin.makeDeposit();
-			}
-			else if (choice == 5)
-			{
-				myAdmin.makeWithdrawal();
-			}
-			else if (choice == 6)
-			{
-				myAdmin.checkBalance();
-			}
-			else if (choice == 7)
-			{
-				myAdmin.printStatement();
-			}
-			else if (choice == 8)
-			{
-				myAdmin.transferAmount();
-			}
-			else if (choice == 9)
-			{
-				myAdmin.displayAccountDetails();
-			}
-			else if (choice == 10)
-			{
-				input.close();
-				break;
-			}
-		}
+//		while(choice != 10)
+//		{
+//			System.out.println("Please enter single digit number (1,2,3... etc.) as per your choice:");
+//			System.out.println("1. Open an account.");
+//			System.out.println("2. Close an account. ");
+//			System.out.println("3. Login to account. ");
+//			System.out.println("4. Make deposit. ");
+//			System.out.println("5. Make withdrawal. ");
+//			System.out.println("6. Check balance. ");
+//			System.out.println("7. Print statement. ");
+//			System.out.println("8. Transfer Amount. ");
+//			System.out.println("9. Display Account Details");
+//			System.out.println("10. Exit");
+//			Scanner input = new Scanner(System.in);
+//			choice = input.nextInt();
+//			if(choice == 1)
+//			{
+//				myAdmin.openAccount();
+//			}
+//			else if (choice == 2)
+//			{
+//				myAdmin.closeAccount();
+//			}
+//			else if (choice == 3)
+//			{
+//				myAdmin.loginAccount();
+//			}
+//			else if (choice == 4)
+//			{
+//				myAdmin.makeDeposit();
+//			}
+//			else if (choice == 5)
+//			{
+//				myAdmin.makeWithdrawal();
+//			}
+//			else if (choice == 6)
+//			{
+//				myAdmin.checkBalance();
+//			}
+//			else if (choice == 7)
+//			{
+//				myAdmin.printStatement();
+//			}
+//			else if (choice == 8)
+//			{
+//				myAdmin.transferAmount();
+//			}
+//			else if (choice == 9)
+//			{
+//				myAdmin.displayAccountDetails();
+//			}
+//			else if (choice == 10)
+//			{
+//				input.close();
+//				break;
+//			}
+//		}
 		
 		return;
 	}
