@@ -253,6 +253,7 @@ public class Admin {
 		// Ignore.
 		Admin myAdmin = new Admin();
 		int choice = 0;
+		System.out.println("hehe");
 //		while(choice != 10)
 //		{
 //			System.out.println("Please enter single digit number (1,2,3... etc.) as per your choice:");
