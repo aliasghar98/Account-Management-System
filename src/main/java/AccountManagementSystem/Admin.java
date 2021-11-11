@@ -9,13 +9,32 @@ public class Admin {
 
 	public List<Customer> customerList = new ArrayList<Customer>();
 	public List<Account> accountList = new ArrayList<Account>();
-	
+	PersistenceHandler DBHandler;
 	public Admin()
 	{
 		return;
 	}
 	public Account openAccount()
 	{
+		int userChoice = 0;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please enter number of the choice of DB: (1,2,3)");
+		System.out.println("1. File");
+		System.out.println("2. Oracle");
+		System.out.println("3. MySQL");
+		userChoice = in.nextInt();
+		if (userChoice == 1)
+		{
+			DBHandler = new FileHandler();
+		}
+		else if (userChoice == 2)
+		{
+			DBHandler = new OracleHandler();
+		}
+		else if (userChoice == 3)
+		{
+			DBHandler = new MySQLHandler();
+		}
 		System.out.println("Opening a new account procedure...");
 		int accNum = 0;
 		Scanner input = new Scanner(System.in);
@@ -87,6 +106,7 @@ public class Admin {
 		newCustomer.setAccType(accType);
 		customerList.add(newCustomer);
 		accountList.add(newAccount);
+		DBHandler.saveAccount(newAccount);
 		System.out.println("Account added successfully.");
 		return newAccount;
 	}
@@ -251,28 +271,21 @@ public class Admin {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Ignore.
+		
+		
 		Admin myAdmin = new Admin();
 		int choice = 0;
-		System.out.println("hehe");
-//		while(choice != 10)
-//		{
-//			System.out.println("Please enter single digit number (1,2,3... etc.) as per your choice:");
-//			System.out.println("1. Open an account.");
-//			System.out.println("2. Close an account. ");
-//			System.out.println("3. Login to account. ");
-//			System.out.println("4. Make deposit. ");
-//			System.out.println("5. Make withdrawal. ");
-//			System.out.println("6. Check balance. ");
-//			System.out.println("7. Print statement. ");
-//			System.out.println("8. Transfer Amount. ");
-//			System.out.println("9. Display Account Details");
-//			System.out.println("10. Exit");
-//			Scanner input = new Scanner(System.in);
-//			choice = input.nextInt();
-//			if(choice == 1)
-//			{
-//				myAdmin.openAccount();
-//			}
+		while(choice != 10)
+		{
+			System.out.println("Please enter single digit number (1,2,3... etc.) as per your choice:");
+			System.out.println("1. Open an account.");
+			System.out.println("10. Exit");
+			Scanner input = new Scanner(System.in);
+			choice = input.nextInt();
+			if(choice == 1)
+			{
+				myAdmin.openAccount();
+			}
 //			else if (choice == 2)
 //			{
 //				myAdmin.closeAccount();
@@ -305,12 +318,12 @@ public class Admin {
 //			{
 //				myAdmin.displayAccountDetails();
 //			}
-//			else if (choice == 10)
-//			{
-//				input.close();
-//				break;
-//			}
-//		}
+			else if (choice == 10)
+			{
+				input.close();
+				break;
+			}
+		}
 		
 		return;
 	}
